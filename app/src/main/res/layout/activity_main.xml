@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#FAFAFA"
+    android:background="#E5F6FD"
     tools:context=".MainActivity">
 
     <ImageView
@@ -34,13 +34,14 @@
         android:layout_height="wrap_content"
         android:text="Buscar Endereço"
         android:textSize="18sp"
-        android:backgroundTint="#4CAF50"
         android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/buttonEnderecosSalvos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp"
         android:text="Endereços Salvos" />
 
 </LinearLayout>

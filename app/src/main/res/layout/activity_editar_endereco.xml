@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5F6FD"
     tools:context=".EditarEnderecoActivity">
 
     <TextView
@@ -84,7 +85,6 @@
         android:layout_height="wrap_content"
         android:text="Salvar"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#00796B"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:padding="12dp"

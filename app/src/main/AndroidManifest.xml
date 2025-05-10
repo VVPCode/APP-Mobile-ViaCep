@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Cep"
         tools:targetApi="31">
         <activity
+            android:name=".EditarEnderecoActivity"
+            android:exported="false" />
+        <activity
             android:name=".EnderecosSalvosActivity"
             android:exported="false" />
         <activity

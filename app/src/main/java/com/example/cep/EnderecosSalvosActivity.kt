@@ -37,6 +37,12 @@ class EnderecosSalvosActivity : AppCompatActivity() {
         carregarEnderecos()
     }
 
+    // Recarrega a lista sempre que a activity volta ao topo (após edição, por exemplo)
+    override fun onResume() {
+        super.onResume()
+        carregarEnderecos()
+    }
+
     private fun carregarEnderecos() {
         lifecycleScope.launch {
             val dao = AppDatabase.getInstance(applicationContext).enderecoDao()
@@ -59,9 +65,8 @@ class EnderecosSalvosActivity : AppCompatActivity() {
     }
 
     private fun editarEndereco(endereco: Endereco) {
-        // Simples exemplo: abrir tela de busca com o CEP preenchido
-        val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("CEP_EDITAR", endereco.cep)
+        val intent = Intent(this, EditarEnderecoActivity::class.java)
+        intent.putExtra("endereco", endereco)
         startActivity(intent)
     }
 }

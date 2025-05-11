@@ -2,6 +2,7 @@ package com.example.cep
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -34,10 +35,17 @@ class EnderecosSalvosActivity : AppCompatActivity() {
 
         recyclerView.adapter = adapter
 
+        // Botão Voltar
+        val btnVoltar = findViewById<Button>(R.id.btnVoltar)
+        btnVoltar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         carregarEnderecos()
     }
 
-    // Recarrega a lista sempre que a activity volta ao topo (após edição, por exemplo)
     override fun onResume() {
         super.onResume()
         carregarEnderecos()

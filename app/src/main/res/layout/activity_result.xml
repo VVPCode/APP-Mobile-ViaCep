@@ -11,7 +11,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Resultado do CEP"
+        android:text="Resultado do CEP pesquisado"
+        android:layout_marginTop="70sp"
         android:textAlignment="center"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="16dp"
         card_view:cardElevation="8dp"
+        android:layout_marginTop="80sp"
         android:backgroundTint="#FFFFFF"
         android:layout_marginBottom="16dp">
 
@@ -73,7 +75,8 @@
 
     <Button
         android:id="@+id/buttonVoltar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#3B3BDE"
         android:text="Voltar" />
 </LinearLayout>

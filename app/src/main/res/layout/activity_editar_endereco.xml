@@ -7,88 +7,105 @@
     android:background="#E5F6FD"
     tools:context=".EditarEnderecoActivity">
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
+    <!-- CardView englobando todos os campos -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Editar Endereço"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="80sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <EditText
-        android:id="@+id/etLogradouro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Logradouro"
-        android:inputType="text"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
-    <EditText
-        android:id="@+id/etBairro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Bairro"
-        android:inputType="text"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/etLogradouro"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Título -->
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar Endereço"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
 
-    <EditText
-        android:id="@+id/etCidade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Cidade"
-        android:inputType="text"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/etBairro"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Campo Logradouro -->
+            <EditText
+                android:id="@+id/etLogradouro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Logradouro"
+                android:inputType="text"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
 
-    <EditText
-        android:id="@+id/etEstado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Estado"
-        android:inputType="text"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/etCidade"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Campo Bairro -->
+            <EditText
+                android:id="@+id/etBairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bairro"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
 
-    <EditText
-        android:id="@+id/etCep"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="CEP"
-        android:inputType="textPostalAddress"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:layout_constraintTop_toBottomOf="@id/etEstado"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Campo Cidade -->
+            <EditText
+                android:id="@+id/etCidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cidade"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
 
+            <!-- Campo Estado -->
+            <EditText
+                android:id="@+id/etEstado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Estado"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
+
+            <!-- Campo CEP -->
+            <EditText
+                android:id="@+id/etCep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CEP"
+                android:inputType="textPostalAddress"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botão Salvar -->
     <Button
         android:id="@+id/btnSalvar"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Salvar"
+        android:backgroundTint="#3B3BDE"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100sp"
         android:layout_marginBottom="32dp"
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/etCep"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

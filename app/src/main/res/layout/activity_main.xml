@@ -1,47 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mainLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#E5F6FD"
-    tools:context=".MainActivity">
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:background="#E5F6FD"
+                    tools:context=".MainActivity">
+
+                    <!-- Título -->
+                    <TextView
+                        android:id="@+id/tvTitulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Busca de Endereço"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"
+                        android:layout_marginBottom="32dp" />
 
     <ImageView
-        android:id="@+id/imageViewBanner"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="32dp"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_width="232dp"
+        android:layout_height="250dp"
+        android:contentDescription="Ícone do aplicativo"
+        android:src="@mipmap/ic_launcher_round" />
 
-    <EditText
-        android:id="@+id/editTextCep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite o CEP (somente números)"
-        android:inputType="number"
-        android:padding="12dp"
-        android:background="@android:drawable/edit_text"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
+                    <!-- CardView contendo EditText e botões -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginBottom="32dp">
 
-    <Button
-        android:id="@+id/buttonSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar Endereço"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp">
 
-    <Button
-        android:id="@+id/buttonEnderecosSalvos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:textSize="18sp"
-        android:text="Endereços Salvos" />
+                            <!-- Campo EditText para o CEP -->
+                            <EditText
+                                android:id="@+id/editTextCep"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Digite o CEP (somente números)"
+                                android:inputType="number"
+                                android:padding="12dp"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="16dp" />
+
+                            <!-- Botão Buscar Endereço -->
+                            <Button
+                                android:id="@+id/buttonSearch"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Buscar Endereço"
+                                android:backgroundTint="#3B3BDE"
+                                android:padding="12dp"
+                                android:layout_marginBottom="16dp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+                    <!-- Botão Endereços Salvos -->
+                    <Button
+                        android:id="@+id/buttonEnderecosSalvos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="130sp"
+                        android:text="Endereços Salvos"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#3B3BDE"/>
 
 </LinearLayout>
